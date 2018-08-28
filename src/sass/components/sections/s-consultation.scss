@@ -1,0 +1,74 @@
+.consultation {
+    padding: 60px 0;
+    &__request {
+        width: 33%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 50px;
+        @include desktops {
+            width: 50%;
+        }
+        @include l-phones {
+            width: 70%;
+        }
+    }
+}
+
+.consultation__title {
+    @include tablets {
+        width: 70%;
+        text-align: center;
+    }
+    @include l-phones {
+        width: 85%;
+    }
+    @include s-phones {
+        width: 100%;
+    }
+}
+
+.form {
+    width: 55%;
+    display: flex;
+    @include large-desktops {
+        width: 70%;
+    }
+    @include desktops {
+        width: 80%;
+    }
+    @include tablets {
+        flex-direction: column;
+    }
+    &__input {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: solid 1px black;
+        font-size: 20px;
+        padding: 13px 0;
+        margin-right: 40px;
+        @include tablets {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        &::-webkit-input-placeholder {
+            text-indent: 0px;
+            transition: text-indent 0.3s ease;
+            opacity: .4;
+        }
+        &:focus::-webkit-input-placeholder {
+            text-indent: 500px;
+            transition: text-indent 0.3s ease;
+        }
+        &::-moz-placeholder {
+            transition: color 0.5s;
+            opacity: .4;
+        }
+        &:focus::-moz-placeholder {
+            color: transparent;
+            transition: color 0.5s;
+        }
+    }
+}

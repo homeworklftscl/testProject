@@ -1,0 +1,17 @@
+.certificates {
+    padding-top: 60px;
+    @include desktops {}
+    &__list {
+        display: flex;
+        @include tablets {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 95%;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}

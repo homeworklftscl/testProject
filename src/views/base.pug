@@ -1,0 +1,20 @@
+include ./components/mixins/mixins.pug
+
+
+html
+    head
+        meta(charset="utf-8")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        block styles
+            link(rel='stylesheet' type='text/css' href='./css/main.css')
+    body
+        .wrapper
+            .maincontent
+                block content
+    
+    block scripts
+        script(src='./js/main.js')
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxeHvnVQ8IOwPdcB-D-11K0a1ilVKcrS0")
+            
+    

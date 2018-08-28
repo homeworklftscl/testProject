@@ -1,0 +1,15 @@
+.project {
+    padding: 60px 0;
+    overflow: hidden;
+    &__slider-list {
+        display: flex;
+        margin-bottom: 115px;
+    }
+    &__slider-img {
+        width: 560px;
+        height: 390px;
+    }
+    &__title {
+        margin-bottom: 60px;
+    }
+}

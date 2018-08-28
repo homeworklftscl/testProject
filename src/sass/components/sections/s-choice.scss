@@ -1,0 +1,43 @@
+.choice {
+    padding-top: 60px;
+    &__list {
+        display: grid;
+        width: 60%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1px 1px;
+        grid-template-areas: ". ." ". .";
+        @include large-desktops {
+            width: 78%;
+        }
+        @include tablets {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__item {
+        display: flex;
+        margin: 0 50px 50px 0;
+        &:nth-child(even) {
+            margin: 0 0 50px 0;
+        }
+    }
+    &__img {
+        width: 60px;
+        height: 60px;
+        margin-right: 25px;
+    }
+    &__name {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &__desc {
+        line-height: 20px;
+    }
+    &__title {
+        @include l-phones {
+            text-align: center;
+        }
+    }
+}

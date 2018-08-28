@@ -1,0 +1,236 @@
+.hero {
+    background-image: url(../images/1.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    @include s-phones {
+        height: 90%;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: .5;
+        z-index: 0;
+    }
+    &__content {
+        color: white;
+    }
+    &__title {
+        font-size: 52px;
+        margin-bottom: 40px;
+        z-index: 99;
+        @include l-phones {
+            text-align: center;
+        }
+        @include s-phones {
+            font-size: 30px;
+        }
+    }
+    &-desc__list {
+        font-size: 30px;
+        font-weight: $semibold;
+        @include s-phones {
+            font-size: 20px;
+        }
+    }
+    &-desc {
+        margin-bottom: 55px;
+        z-index: 99;
+        @include l-phones {
+            margin-bottom: 40px;
+        }
+    }
+    &-desc__item {
+        text-align: center;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__sub-title {
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        margin-bottom: 90px; //z-index: 99
+        @include l-phones {
+            margin-bottom: 40px;
+        }
+    }
+    &__sub-title_text {
+        font-weight: 500;
+        margin-bottom: 8px;
+        @include l-phones {
+            width: 85%;
+            text-align: center;
+        }
+        @include s-phones {
+            font-size: 20px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__btn {
+        text-transform: uppercase;
+        z-index: 99
+    }
+    &__arrow {
+        display: block;
+        position: absolute;
+        bottom: 7%;
+        z-index: 998;
+        @include l-phones {
+            bottom: 6%;
+        }
+        @include s-phones {
+            bottom: 7%;
+        }
+    }
+}
+
+.title {
+    font-size: 42px;
+    margin-bottom: 50px;
+    @include l-phones {
+        font-size: 35px;
+    }
+    @include s-phones {
+        font-size: 30px;
+    }
+}
+
+.btn {
+    background-color: $purp;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sbtn {
+    padding: 12px 22px;
+    font-size: 14px;
+    @include desktops {
+        padding: 12px;
+    }
+}
+
+.bbtn {
+    padding: 20px 60px;
+    font-size: 16px;
+    @include s-phones {
+        padding: 15px 30px;
+    }
+}
+
+.header_btn {
+    margin-right: 20px;
+}
+
+.header {
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+    padding: 3px 40px 3px 60px;
+    position: fixed;
+    @include tablets {
+        display: none;
+    }
+}
+
+.header__block,
+.header__logo,
+.header__list {
+    width: 33%;
+}
+
+.header__nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__phone {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header__list {
+    color: black;
+    font-weight: bold;
+    display: flex;
+}
+
+.header__item {
+    margin-right: 25px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__img {
+    width: 135px;
+    height: 70px;
+}
+
+.arrow__img {
+    width: 50px;
+    fill: #fff;
+    z-index: 1;
+    @include s-phones {
+        width: 40px;
+    }
+}
+
+.btn__fixed {
+    cursor: pointer;
+    position: fixed;
+    background-color: $purp;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 999;
+    right: 5%;
+    top: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include s-phones {
+        width: 50px;
+        height: 50px;
+    }
+    &_img {
+        width: 30px;
+        height: 30px;
+        @include s-phones {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

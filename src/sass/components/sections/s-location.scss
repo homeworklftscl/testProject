@@ -1,0 +1,98 @@
+.location {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    @include l-phones {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    @include s-phones {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.contacts,
+#map {
+    width: 50%;
+    height: 100%;
+    @include l-phones {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+    &__title {
+        font-size: 30px;
+        margin-bottom: 40px;
+        @include s-phones {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+    }
+    &__phone,
+    .contacts__email {
+        color: black;
+        font-weight: 500;
+        font-size: 25px;
+        @include s-phones {
+            font-size: 18px;
+        }
+    }
+    &__address,
+    .contacts__index {
+        font-weight: 500;
+        font-size: 20px;
+        @include s-phones {
+            font-size: 18px;
+        }
+    }
+    &__email,
+    .contacts__index {
+        margin-bottom: 40px;
+        @include s-phones {
+            margin-bottom: 20px;
+        }
+    }
+    &__phone,
+    .contacts__address {
+        margin-bottom: 6px;
+    }
+}
+
+.social {
+    &__list {
+        display: flex;
+        flex-direction: row;
+    }
+    &__item {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    &__img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
